@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  	<head>
+    	<meta charset="utf-8">
+    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+	    <link rel="icon" href="facebook.png">
+	    <title>FaceBook Statistics</title>
+		<script src="https://d3js.org/d3.v4.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/css/bootstrap-select.min.css">
+	    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/js/bootstrap-select.min.js"></script>
+
+	    
+
+  	</head>
+  
+  	<style>
+  	
+	/* NAVIGATION BAR */
+	.navbar {
+		text-align:center;
+	    font-family: Montserrat, sans-serif;
+	}
+
+	.navbar {
+	    margin-bottom: 0;
+	    text-align:center;
+	    border: 0;
+	    font-size: 15px !important;
+	    letter-spacing: 4px;
+	    color: #e57e71 !important;
+	    background: black;
+	    opacity: 0.7;
+	    z-index: 1;
+	}
+
+	.navbar li a {
+		font-size: 15px !important;
+	    letter-spacing: 4px;
+		text-align:center !important;
+	    color: #e57e71 !important;
+	}
+	.navbar-brand {
+		font-size: 20px !important;
+	    letter-spacing: 4px;
+		text-align:center !important;
+	    color: #e57e71 !important;
+	}
+
+
+	.navbar-nav li a:hover {
+	    color: #474e5d !important;
+	}
+
+	.navbar-nav li.active a {
+	    color: #474e5d !important;
+	    background-color: #29292c !important;
+
+	}
+
+	.navbar-default .navbar-toggle {
+	    border-color: transparent;
+	}
+
+	/* NAVIGATION BAR END */
+
+	.container
+	{
+		text-align:center;
+	}
+  	.myclass
+  	{
+
+  	}
+
+
+  	</style>
+
+  	<body style="background-color: #474e5d;">
+    	<div class="container">
+    	<!-- NAVIGATION BAR START  -->
+		<nav class="navbar navbar-default navbar-fixed-top">
+    		<div class="container-fluid">
+        		<div class="navbar-header">
+	            	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+	            	<span class="icon-bar"></span>
+	            	</button>
+	            	<a class="navbar-brand">&nbsp;&nbsp;Namita Mhatre - CSE 564 Visualization: Assignments 1 - FaceBook Statistics Visualization</a> 
+	        	</div>
+        		<div class="collapse navbar-collapse" id="myNavbar">
+            		<ul class="nav navbar-nav navbar-center">
+            			<li><a> &nbsp;Select a variable :  &nbsp;&nbsp; &nbsp;&nbsp;</a></li>
+              		  	<li><select class="selectpicker" data-style="btn-info" data-width="fit" onChange="selectvar(value)" id="dropdown" title="Choose a variable">
+					 	</select></li>
+            		</ul>
+        		</div>
+    		</div>
+		</nav>
+		<!--  NAVIGATION BAR END -->
+      
+      	<br><br><br><br><br><br>
+	  		
+	  		<script src="myjs.js"></script>
+			<script src="d3-tip.js"></script>
+    
+	  		<div class="jumbotron" align="center" id="graph">
+      		
+      		</div>
+
+      		<div class="jumbotron" style="background-color: #e57e71;" id="drag">
+      		<p>Drag this portion to change the bin size.</p>
+      		</div>
+    	</div>
+
+	
+	
+    	<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/js/bootstrap-select.min.js"></script>
+ 	</body>
+</html>
